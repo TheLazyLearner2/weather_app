@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>My Weather App</title>
+        <body>
+            <h2>Weather application using Flask</h2>
+            <form action="{{ url_for('index') }}" method="post">
+                city name: <input type="text" name="city"><br>
+                Fahrenheit: <input type="radio" name="temp_unit" value="imperial"><br>
+                Celsius: <input type="radio" name="temp_unit" value="metric"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </body>
+    </head>
+</html>

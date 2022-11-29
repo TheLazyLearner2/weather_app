@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Weather App</title>
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+
+    <link rel='stylesheet' id='roboto-subset.css-css'  href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5' type='text/css' media='all' />
+
+</head>
+<body>
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+      
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+      
+              <h3 class="mb-4 pb-2 fw-normal">Check the weather forecast</h3>
+      
+              <div class="input-group rounded mb-3">
+               
+                <form action="{{ url_for('index') }}" method="post">
+                  city name: <input type="text" name="city"><br>
+
+                  <div class="mb-4 pb-2">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="temp_unit" id="inlineRadio1"
+                      value="metric" {{metric_checked}} °C/>
+                      <label class="form-check-label" for="inlineRadio1">Celsius</label>
+                    </div>
+          
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="temp_unit" id="inlineRadio2"
+                      value="imperial" {{imperial_checked}} °F/>
+                      <label class="form-check-label" for="inlineRadio2">Farenheit</label>
+                    </div>
+                  </div>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+      
+              <div class="card shadow-0 border">
+                <div class="card-body p-4">
+      
+                  <h4 class="mb-1 sfw-normal">{{ city }}</h4>
+                  <p class="mb-2">Current temperature: <strong>{{ current_temp }} {{ metric }}</strong></p>
+                  <p>Feels like: <strong>{{ feels_like }}</strong></p>
+                  <p>Max: <strong>{{ max_temp }} {{ metric }}</strong>, Min: <strong>{{ min_temp }} {{ metric }}</strong></p>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+    <div>
+  </body>
+</html>

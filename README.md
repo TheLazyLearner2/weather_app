@@ -8,5 +8,10 @@ name in the search bar and tick the opposite weather denotation.
 
 # Setup
 This app uses a config.ini file that contains an API_key. You must first register with https://openweathermap.org/api and get your own API_key 
-in order for this app to work properly. This app also runs on Python 3.10. It imports the Flask package which includes request, render_template, and
-abort. It also uses requests and configparser.
+in order for this app to work properly. This app also runs on Python 3.10. It imports the Flask package which includes request, render_template, and abort. It also uses requests and configparser.
+
+# Note
+This weather app has been disconnected off of AWS. If you wish to run this app please ...
+1. open a code editor (vscode was the editor i used)
+2. Activate a virtual enviroment(venv) 
+3. Once virtual enviroment is activated please run flask run in your terminal. Please click on the link that starts with http://127

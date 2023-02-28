@@ -14,4 +14,4 @@ in order for this app to work properly. This app also runs on Python 3.10. It im
 This weather app has been disconnected off of AWS. If you wish to run this app please ...
 1. open a code editor (vscode was the editor i used)
 2. Activate a virtual enviroment(venv) 
-3. Once virtual enviroment is activated please run flask run in your terminal. Please click on the link that starts with http://127
+3. Once virtual enviroment is activated please run flask run in your terminal. Please click on the link that starts with http://127.0.0.1:5000
